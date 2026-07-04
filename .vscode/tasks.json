@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build mlq",
+      "type": "process",
+      "command": "g++",
+      "args": [
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-g",
+        "${workspaceFolder}/src/Process.cpp",
+        "${workspaceFolder}/src/FileParser.cpp",
+        "${workspaceFolder}/src/RoundRobin.cpp",
+        "${workspaceFolder}/src/SJF.cpp",
+        "${workspaceFolder}/src/Queue.cpp",
+        "${workspaceFolder}/src/MLQScheduler.cpp",
+        "${workspaceFolder}/src/ReportWriter.cpp",
+        "${workspaceFolder}/src/main.cpp",
+        "-o",
+        "${workspaceFolder}/mlq"
+      ],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
